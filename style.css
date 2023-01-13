@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(158, 3, 158, 0.793);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+button{
+    border: 0;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+    font-weight: bold;
+    font-family: inherit;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+}
+#btn:active{
+    transform: scale(0.95);
+}
+.messages-container{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+    transition:  1s ease;
+}
+.messages-container button{
+
+    transform: translateX(120%);
+    transition:  1s ease;
+}
+.messages-container .message{
+    transition:  1s ease;
+    transform: translate(-10%);
+}
+.message.info{
+    color:  rgba(158, 3, 158, 0.793);
+}
+.message.success{
+    color: green;
+}
+.message.error{
+    color: red;
+}
